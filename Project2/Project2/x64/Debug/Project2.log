@@ -1,0 +1,6 @@
+﻿  Source.c
+D:\practice\c\Project2\Project2\Source.c(16,10): warning C4477: 'scanf_s' : format string '%s' requires an argument of type 'unsigned int', but variadic argument 2 has type 'size_t'
+D:\practice\c\Project2\Project2\Source.c(16,10): message : this argument is used as a buffer size
+D:\practice\c\Project2\Project2\Source.c(22,10): warning C4477: 'scanf_s' : format string '%s' requires an argument of type 'unsigned int', but variadic argument 2 has type 'size_t'
+D:\practice\c\Project2\Project2\Source.c(22,10): message : this argument is used as a buffer size
+  Project2.vcxproj -> D:\practice\c\Project2\x64\Debug\Project2.exe
