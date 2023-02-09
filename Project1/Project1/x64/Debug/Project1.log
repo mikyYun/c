@@ -1,0 +1,3 @@
+﻿  Source.c
+D:\practice\c\Project1\Project1\Source.c(11,9): warning C4477: 'printf' : format string '%d' requires an argument of type 'int', but variadic argument 1 has type 'double'
+  Project1.vcxproj -> D:\practice\c\Project1\x64\Debug\Project1.exe
