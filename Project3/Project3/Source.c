@@ -1,35 +1,25 @@
 #include <stdio.h>
-#include <stdlib.h>
 
-void main() {
-	char color[20];
-	char pluralNoun[20];
-	char celebrityFirst[20];
-	char celebrityLast[20];
-	char celebrityFull[20];
+int main() {
+	printf("Enter your number: ");
+	int n;
+	scanf_s("%d", &n);
 
-	printf("Enter a color: ");
-	scanf_s("%s", color, (unsigned)_countof(color));
-	printf("Enter a plural noun: ");
-	scanf_s("%s", pluralNoun, (unsigned)_countof(pluralNoun));
-	printf("Enter full name of a celebrity: ");
-	scanf_s("%s%s", celebrityFirst, (unsigned)_countof(celebrityFirst), celebrityLast, (unsigned)_countof(celebrityLast));
+	printf("The divisor of %d are : ", n);
 	
-//	getchar(); // return value ignored warning
-	int c;
-	while ((c = getchar()) != '\n' && c != EOF);
-	
-	printf("Another name: ");
-	fgets(celebrityFull, 20, stdin);
-	// remove new line from end of string if it exists
-	int length = strlen(celebrityFull);
-	if (celebrityFull[length - 1] == '\n') {
-		celebrityFull[length - 1] = '\0';
+	printf("1 ");
+	if (n == 1) {
+		printf("\n Done.");
+		return 0;
 	}
-	printf("Roses are %s.\n", color);
-	printf("%s are blue.\n", pluralNoun);
-	printf("I love %s %s.\n", celebrityFirst, celebrityLast);
-	printf("I love %s.\n", celebrityFull);
+	// from 2 to half of n
+	for (int i = 2; i <= n / 2; i++) { 
+		if (n % i == 0) {
+			printf("%d ", i);
+		}
+	}
+	printf("%d\n Done.", n);
 
-//	return 0;
+	
+	return 0;
 }

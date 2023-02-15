@@ -1,28 +1,28 @@
 #include <stdio.h>
 
-void main() {
-	// modifiable variable
-	int num = 5;
-	printf("First num = %d\n", num);
-	num = 11;
-	printf("Second num = %d\n", num);
+int main() {
+	int n = 0;
+	int sum = 0;
 
-	const constNum = 10;
-	printf("Const num = %d\n", constNum);
-	// constNum = 222; // expresssion must be a modifiable lvalue
+	/* do-while
+	do {
+		printf("Enter a number : ");
+		scanf_s("%d", &n);
+		sum += n;
+		printf("Sum is %d\n", sum);
+	} while (sum <= 100);
+	*/
 
-	char lastName[20];
-	printf("Enter your last name\n");
-	scanf_s("%s", &lastName, sizeof(lastName));
+	/* for
+	
+	for (; sum <= 100;) {
+		printf("Enter a number : ");
+		scanf_s("%d", &n);
+		sum += n;
+		printf("Sum is %d\n", sum);
+	}
+	*/
 
-	printf("Your name is %s\n", lastName);
-
-	char firstName[20];
-	printf("Enter your first name\n");
-	scanf_s("%s", &firstName, sizeof(firstName));
-	printf("Your first name is %s\n", firstName); // mike => mike, mike yun => mike and yun goes to next scanf
-
-	printf("Re-enter your first name\n");
-	fgets(firstName, 20, stdin); // mike yun => mike yun
-	printf("Your first name is %s\n", firstName);
+	printf("Final sum is %d\n", sum);
+	return 0;
 }
