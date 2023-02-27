@@ -1,3 +1,4 @@
 ﻿  Source.c
-D:\practice\c\Project8\Project8\Source.c(6,2): warning C4013: 'gets' undefined; assuming extern returning int
+D:\practice\c\Project8\Project8\Source.c(4,22): warning C4013: 'strlen' undefined; assuming extern returning int
+D:\practice\c\Project8\Project8\Source.c(12,2): warning C4013: 'gets' undefined; assuming extern returning int
   Project8.vcxproj -> D:\practice\c\Project8\x64\Debug\Project8.exe
