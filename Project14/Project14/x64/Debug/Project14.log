@@ -1,0 +1,3 @@
+﻿  Source.c
+D:\practice\c\Project14\Project14\Source.c(5,8): warning C4013: 'time' undefined; assuming extern returning int
+  Project14.vcxproj -> D:\practice\c\Project14\x64\Debug\Project14.exe
