@@ -1,4 +1,2 @@
 ﻿  Source.c
-D:\practice\c\Project18\Project18\Source.c(13,19): warning C4013: 'malloc' undefined; assuming extern returning int
-D:\practice\c\Project18\Project18\Source.c(13,12): warning C4047: 'initializing': 'treeNode *' differs in levels of indirection from 'int'
   Project18.vcxproj -> D:\practice\c\Project18\x64\Debug\Project18.exe
