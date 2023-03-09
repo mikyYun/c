@@ -31,15 +31,12 @@ treeNode* insertNode(treeNode** treePtr, int val) {
 	if (node == NULL) {
 		printf("CREATE = %d\n", val);
 		node = createNode(val);
-		// tree->value = val;
-		// return treePtr;
 
 	}
 	else {
 		
 		printf("value in head = %d, INSERTION = %d\n", node->value, val);
 
-		//int root = *tree->value;
 		if (node->value> val) {
 			printf("GO LEFT\n");
 			node->left = insertNode((&node->left), val);
@@ -49,11 +46,35 @@ treeNode* insertNode(treeNode** treePtr, int val) {
 			node->right = insertNode((&node->right), val);
 		}
 	}
-/*
-*/
 	printf("INSERTION END\n");
-	// return 0;
 	return node;
+}
+
+void tabs(int val) {
+	for (int i = 0; i < val; i++) {
+		printf("\t\t");
+	}
+}
+
+void printTree(treeNode** treePtr, int lev) {
+	treeNode* node = *treePtr;
+	if (node != NULL) {
+		//return;
+		printf("LEV = %d\n", lev);
+		tabs(lev);
+		printf("%d  \n", node->value);
+		lev++;
+		if (node->left != NULL) {
+			tabs(lev);
+			printf("LEFT :   ");
+			printTree((&node->left), lev);
+		}
+		if (node->right != NULL) {
+			tabs(lev);
+			printf("RIGHT :   ");
+			printTree((&node->right), lev);
+		}
+	}
 }
 
 int main() {
@@ -82,23 +103,13 @@ selection:
 			printf("Invalid option. Program End.\n");
 			return 0;
 		}
-//		treeNode* tree = createNode(val);
-
 		tree = insertNode(&tree, val);
-		printf("TEST    ");
-//		printf("TEST = %d\n", tree->value);
-		/*
-		if (tree->value) {
-		}
-		else {
-			tree = createNode(val);
-		}
-*/
 	}
 	else if (select == 2) {
-
 	}
 	else if (select == 3) {
+//		printf("val = %d\n", tree->value);
+		printTree(&tree, 0);
 
 	}
 	goto selection;
