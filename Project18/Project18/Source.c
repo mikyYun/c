@@ -52,28 +52,32 @@ treeNode* insertNode(treeNode** treePtr, int val) {
 
 void tabs(int val) {
 	for (int i = 0; i < val; i++) {
-		printf("\t\t");
+		printf("\t");
 	}
 }
 
 void printTree(treeNode** treePtr, int lev) {
 	treeNode* node = *treePtr;
 	if (node != NULL) {
-		//return;
-		printf("LEV = %d\n", lev);
-		tabs(lev);
-		printf("%d  \n", node->value);
 		lev++;
+		//return;
+		//tabs(lev);
+		printf("%d\n", node->value);
 		if (node->left != NULL) {
-			tabs(lev);
-			printf("LEFT :   ");
+//		printf("LEV = %d\n", lev);
+		tabs(lev);
+			printf("LEFT : ");
 			printTree((&node->left), lev);
 		}
 		if (node->right != NULL) {
+//			printf("LEV = %d\n", lev);
 			tabs(lev);
-			printf("RIGHT :   ");
+			//tabs(lev);
+			printf("RIGHT : ");
 			printTree((&node->right), lev);
 		}
+	} else {
+		printf("===<EMPTY NODE>====\n");
 	}
 }
 
@@ -109,6 +113,7 @@ selection:
 	}
 	else if (select == 3) {
 //		printf("val = %d\n", tree->value);
+		printf("\n==========SHOW TREE==========\n");
 		printTree(&tree, 0);
 
 	}
